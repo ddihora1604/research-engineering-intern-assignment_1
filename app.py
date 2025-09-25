@@ -1033,7 +1033,7 @@ def get_ai_summary():
             }
             
             payload = {
-                "model": "llama3-8b-8192",  # Using LLaMA 3 model via Groq
+                "model": "qwen/qwen3-32b",  # Using LLaMA 3 model via Groq
                 "messages": [
                     {"role": "system", "content": "You are an expert data analyst specializing in social media trends analysis. You provide well-structured, visually organized reports with appropriate headings and formatting."},
                     {"role": "user", "content": prompt}
@@ -1578,7 +1578,7 @@ def get_dynamic_description():
         }
         
         payload = {
-            "model": "llama3-8b-8192",
+            "model": "qwen/qwen3-32b",
             "messages": [
                 {"role": "system", "content": "You are a data visualization expert specializing in social media analytics. You explain complex data patterns in clear, insightful language that highlights meaningful insights. Output in HTML format with proper structure."},
                 {"role": "user", "content": prompt}
@@ -2080,7 +2080,7 @@ def chatbot_response():
             
             try:
                 # Generate response using Gemini API
-                gemini_model = genai.GenerativeModel('gemini-1.5-flash')
+                gemini_model = genai.GenerativeModel('gemini-2.5-flash')
                 gemini_response = gemini_model.generate_content(gemini_prompt)
                 
                 if gemini_response:
@@ -2443,7 +2443,7 @@ def get_historical_events():
             """
             
             payload = {
-                "model": "llama3-8b-8192",
+                "model": "qwen/qwen3-32b",
                 "messages": [
                     {"role": "system", "content": "You are a helpful assistant that provides accurate historical information."},
                     {"role": "user", "content": prompt}
